@@ -1,3 +1,8 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from statistics import mean
+import random
+
 def linregress(X: np.array ,Y: np.array, color: str = 'r'):
 
   # Function to calculate r-squared given the sets of numbers, the slope, and the y intercept.
@@ -44,7 +49,7 @@ def linregress(X: np.array ,Y: np.array, color: str = 'r'):
     plt.show()
 
 
-  rs = rsquared(x,y, slope, y_int)
+  rs = rsquared(X,Y, slope, y_int)
   print(f"Slope: {slope} \n Y-Intercept: {y_int} \n R-Squared: {rs}")
-  plot(x,y)
+  plot(X,Y)
   return slope, y_int, rs
